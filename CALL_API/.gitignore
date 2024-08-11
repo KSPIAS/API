@@ -5,9 +5,9 @@
 *.pyo
 *.sqlite3
 db.sqlite3
-venv/
+# venv/
 __pycache__/
 *.DS_Store
-*.env
+# *.env
 env/
-../env/
+# ../env/
