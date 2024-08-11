@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>API_Weatherstack</title>
+{% endblock %}
+
+{% block content %}
+    <!-- {{all_person}} -->
+    <h2 class="text-center">API_Weatherstack</h2>
+    <table class="table table-success table-striped">
+        <thead>
+        <tr>
+            <!-- <th scope="col">รหัส</th>
+            <th scope="col">ชื่อ</th>
+            <th scope="col">อายุ</th>
+            <th scope="col"></th>
+            <th scope="col"></th> -->
+        </tr>
+        </thead>
+        <tbody>
+            {% for person in all_person %}
+            <!-- <tr>
+                <th scope="row">{{person.id}}</th>
+                <td>{{person.name}}</td>
+                <td>{{person.age}}</td>
+                <td><a href="#" class="btn btn-warning">แก้ไข</a></td>
+                <td><a href="#" class="btn btn-danger">ลบ</a></td>
+            </tr> -->
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>API_COVID</title>
+{% endblock %}
+
+{% block content %}
+    <!-- {{all_person}} -->
+    <h2 class="text-center">API_COVID</h2>
+    <table class="table table-success table-striped">
+        <thead>
+        <tr>
+            <th scope="col">iso</th>
+            <th scope="col">name</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for item in response.data %}
+                <!-- ISO: {{ item.iso }} - Name: {{ item.name }} -->
+            <tr>
+                <th scope="row">{{ item.iso }} </th>
+                <td>{{ item.name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
