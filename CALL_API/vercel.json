@@ -1,14 +1,14 @@
 {
     "builds": [
         {
-          "src": "API_Weatherstack/wsgi.py",
+          "src": "CALL_API/wsgi.py",
           "use": "@vercel/python"
         }
     ],
     "routes": [
         {
           "src": "/(.*)",
-          "dest": "API_Weatherstack/wsgi.py"
+          "dest": "CALL_API/wsgi.py"
         }
     ]
 }
