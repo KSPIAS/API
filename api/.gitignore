@@ -13,8 +13,9 @@ out/
 .env
 .env.local
 .env.*.local
-../venv/
+"D:\Learn\Django Call API\venv"
 env/
+venv/
 
 # OS-specific files
 .DS_Store
