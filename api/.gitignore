@@ -13,7 +13,6 @@ out/
 .env
 .env.local
 .env.*.local
-"D:\Learn\Django Call API\venv"
 env/
 venv/
 
