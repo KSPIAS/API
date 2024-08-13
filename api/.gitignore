@@ -13,7 +13,7 @@ out/
 .env
 .env.local
 .env.*.local
-venv/
+../venv/
 env/
 
 # OS-specific files
