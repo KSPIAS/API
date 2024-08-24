@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>API_Weatherstack</title>
+{% endblock %}
+
+{% block content %}
+    {{get_apilogin}}
+    <h2 class="text-center">API_Weatherstack</h2>
+    <table class="table table-success table-striped">
+        <thead>
+        <tr>
+            <!-- <th scope="col">iso</th>
+            <th scope="col">name</th> -->
+        </tr>
+        </thead>
+        <tbody>
+            {% for item in get_apilogin %}
+                <!-- {{item.name}} -->
+                <!-- {{item.url}}{{item.pwd}} -->
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

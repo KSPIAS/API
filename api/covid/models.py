@@ -8,9 +8,9 @@ class Author(models.Model):
     def __str__(self):
         return self.name
     
-class apilogin(models.Model):
-    name = models.CharField(max_length=100)
-    pwd = models.CharField(max_length=100)
+# class apilogin(models.Model):
+#     name = models.CharField(max_length=100)
+#     pwd = models.CharField(max_length=100)
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name

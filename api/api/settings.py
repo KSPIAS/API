@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'covid',
     'home',
+    'weatherstack',
 ]
 
 MIDDLEWARE = [
