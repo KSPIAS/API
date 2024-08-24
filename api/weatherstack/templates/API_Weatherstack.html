@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-    {{get_apilogin}}
+    <!-- {{get_apilogin}} -->
     <h2 class="text-center">API_Weatherstack</h2>
     <table class="table table-success table-striped">
         <thead>
@@ -19,6 +19,7 @@
                 <!-- {{item.name}} -->
                 <!-- {{item.url}}{{item.pwd}} -->
             {% endfor %}
+            {{get_api}}
         </tbody>
     </table>
 {% endblock %}
