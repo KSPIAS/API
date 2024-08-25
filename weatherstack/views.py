@@ -28,7 +28,7 @@ def w_request(query):
         # offset = timezone(timedelta(hours=7))
         # data_date = data_date.date()
         # print(data_date)
-        data_date = "2024-08-25"
+        data_date = "2024-08-30"
         result = location + "-" + str(data_date)
         return result
     except:
