@@ -19,8 +19,8 @@ class apilogin(models.Model):
         return self.name
 
 class api_request(models.Model):
+    city = models.CharField(max_length=100 ,primary_key=True)
     type = models.CharField(max_length=100)
-    query = models.CharField(max_length=100)
     language = models.CharField(max_length=20)
     unit = models.CharField(max_length=10)
     # data_date = models.DateTimeField(auto_now_add=True)
@@ -31,4 +31,4 @@ class api_request(models.Model):
         managed = False
     
     def __str__(self):
-        return self.query
+        return self.city
