@@ -1,0 +1,41 @@
+{
+    "request": {
+        "type": "City",
+        "query": "Tak, Thailand",
+        "language": "en",
+        "unit": "m"
+    },
+    "location": {
+        "name": "Tak",
+        "country": "Thailand",
+        "region": "Tak",
+        "lat": "16.867",
+        "lon": "99.133",
+        "timezone_id": "Asia/Bangkok",
+        "localtime": "2024-09-01 11:11",
+        "localtime_epoch": 1725189060,
+        "utc_offset": "7.0"
+    },
+    "current": {
+        "observation_time": "04:11 AM",
+        "temperature": 30,
+        "weather_code": 116,
+        "weather_icons": [
+            "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png"
+        ],
+        "weather_descriptions": [
+            "Partly cloudy"
+        ],
+        "wind_speed": 4,
+        "wind_degree": 274,
+        "wind_dir": "W",
+        "pressure": 1009,
+        "precip": 0,
+        "humidity": 70,
+        "cloudcover": 50,
+        "feelslike": 36,
+        "uv_index": 6,
+        "visibility": 10,
+        "is_day": "yes"
+    }
+}

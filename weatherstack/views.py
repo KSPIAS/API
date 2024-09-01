@@ -3,11 +3,17 @@ import requests
 from weatherstack.models import apilogin ,api_request ,api_location ,api_current
 from datetime import datetime, timezone, timedelta
 from googletrans import Translator
+import json
+import os
+import pandas as pd
+# from pyspark.sql import SparkSession
 
 # Create your views here.
 def API_Weatherstack(request):
-    city = "Cha-am"
+    city = "Chiang Mai"
     result = w_request(city)
+    w_csv()
+    r_csv()
     return render(request,"API_Weatherstack.html",{'get_api':result})
 
 def wind_dir_to_th(wind_dir):
@@ -41,6 +47,52 @@ def trans_to_th(text):
         return translated.text
     except Exception as e:
         print(f"An error occurred: {e}")
+
+########################### Read JSON ##########################
+def read_file_json(file_path):
+    try:
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+            return data
+    except FileNotFoundError:
+        print(f"File not found: {file_path}")
+    except json.JSONDecodeError:
+        print(f"Error decoding JSON from the file: {file_path}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+################################################################
+
+######################### Read/Write CSV #######################
+def w_csv():
+    all_fields = [field.name for field in api_location._meta.get_fields()]
+    # print("all_fields" ,all_fields)
+    data_location = api_location.objects.all()
+    data_list = list(data_location.values(*all_fields))
+    # print("Data List:", data_list)
+    df = pd.DataFrame(data_list)
+    # print(df)
+    directory = "weatherstack/csv"
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    file_path = os.path.join(directory, "api_location.csv")
+    try:
+        df.to_csv(file_path ,index=False)
+        print(f"DataFrame successfully saved to '{file_path}'.")
+    except PermissionError:
+        print(f"Permission denied. The file '{file_path}' may be open or in use.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+    # return df
+def r_csv():
+    try:
+        directory = "weatherstack/csv"
+        file_path = os.path.join(directory, "api_location.csv")
+        df = pd.read_csv(file_path ,dtype=str)
+        print(df)
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+################################################################
+
 def w_request(city):
     try:
         current_date = datetime.now().date()
@@ -96,10 +148,18 @@ def w_request(city):
         result_temp = f"อุณหภูมิ : {temperature} ℃"
         result_weather_desc = f"สภาพอากาศ : {weather_desc_trans}"
         result = f"{result_location} {result_win} {result_temp} {result_weather_desc}"
+
+        data_date_file = data_date.date().strftime('%Y%m%d')
+        file_path = f"weatherstack\json\weatherstack_{city}_{data_date_file}.json"
+        data = read_file_json(file_path)
+        print(file_path)
+        # print(data)
+
         return result
     except:
         data_date = datetime.now()
         data_date_id = data_date.date()
+        data_date_file = data_date.date().strftime('%Y%m%d')
         data_date = data_date.isoformat()
         get_apilogin = apilogin.objects.filter(name="weatherstack_current")
         city = city
@@ -110,31 +170,62 @@ def w_request(city):
         get_api = get_api.strip()
         if total_in_month < 245:
             response = requests.get(get_api).json()
+
+            try:
+                # Save JSON data to a file
+                # Ensure directory exists
+                file_path = f"weatherstack\json\weatherstack_{city}_{data_date_file}.json"
+                os.makedirs(os.path.dirname(file_path), exist_ok=True)
+                
+                with open(file_path, 'w') as file:
+                    json.dump(response, file, indent=4)
+                print(f"Data successfully saved to {file_path}")
+            except IOError as e:
+                print(f"Failed to write to file: {e}")
+
             ##request
-            js_request = response['request']
-            # print(js_request)
-            js_request_new = js_request.pop('query')
-            js_request['city'] = js_request_new
-            print(js_request)
-            request_id=city+":"+str(data_date_id)
-            api_request.objects.create(request_id=request_id,**js_request ,data_date=data_date)
+            try:
+                js_request = response['request']
+                # print(js_request)
+                js_request_new = js_request.pop('query')
+                js_request['city'] = js_request_new
+                print(js_request)
+                request_id=city+":"+str(data_date_id)
+                api_request.objects.create(request_id=request_id,**js_request ,data_date=data_date)
+                request_result = "Insert api_request success"
+            except Exception as e:
+                # Handle other potential errors (e.g., database errors)
+                print(f"An unexpected error occurred: {e}")
+                request_result = f"{e}"
 
             ##location
-            js_location = response['location']
-            # print(js_location)
-            js_location_new = js_location.pop('localtime')
-            js_location['local_time'] = js_location_new
-            print(js_location)
-            location_id=js_location['name']+" ,"+js_location['country']+":"+str(data_date_id)
-            api_location.objects.create(location_id=location_id,request_id=request_id,**js_location,data_date=data_date)
+            try:
+                js_location = response['location']
+                # print(js_location)
+                js_location_new = js_location.pop('localtime')
+                js_location['local_time'] = js_location_new
+                print(js_location)
+                location_id=js_location['name']+" ,"+js_location['country']+":"+str(data_date_id)
+                api_location.objects.create(location_id=location_id,request_id=request_id,**js_location,data_date=data_date)
+                location_result = "Insert api_location success"
+            except Exception as e:
+                # Handle other potential errors (e.g., database errors)
+                print(f"An unexpected error occurred: {e}")
+                location_result = f"{e}"
 
             ##current
-            js_current = response['current']
-            print(js_current)
-            current_id = location_id
-            api_current.objects.create(current_id=current_id,request_id=request_id,**js_current ,data_date=data_date)
+            try:
+                js_current = response['current']
+                print(js_current)
+                current_id = location_id
+                api_current.objects.create(current_id=current_id,request_id=request_id,**js_current ,data_date=data_date)
+                current_result = "Insert api_current success"
+            except Exception as e:
+                # Handle other potential errors (e.g., database errors)
+                print(f"An unexpected error occurred: {e}")
+                current_result = f"{e}"
 
-            result = "Insert request success"
+            result = f"{request_result} ,{location_result} ,{current_result}"
         else:
             result = "Usage limit has been reached"
         # print(response)

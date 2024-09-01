@@ -1,0 +1,17 @@
+location_id,request_id,name,country,region,lat,lon,timezone_id,local_time,localtime_epoch,utc_offset,data_date
+"Bangkok ,Thailand:2024-08-31",Bangkok:2024-08-31,Bangkok,Thailand,Krung Thep,13.750,100.517,Asia/Bangkok,2024-08-31 09:25:00+00:00,1725121500,7.0,2024-08-31 09:25:48.250682+00:00
+"Uttaradit ,Thailand:2024-08-31",Uttaradit:2024-08-31,Uttaradit,Thailand,Uttaradit,17.631,100.101,Asia/Bangkok,2024-08-31 10:32:00+00:00,1725125520,7.0,2024-08-31 10:32:09.690086+00:00
+"Muang Pichai ,Thailand:2024-08-31",Pichai:2024-08-31,Muang Pichai,Thailand,Uttaradit,17.287,100.097,Asia/Bangkok,2024-08-31 10:53:00+00:00,1725126780,7.0,2024-08-31 10:53:43.664707+00:00
+"Pathum Thani ,Thailand:2024-08-31",Pathum:2024-08-31,Pathum Thani,Thailand,Pathum Thani,14.017,100.533,Asia/Bangkok,2024-08-31 10:57:00+00:00,1725127020,7.0,2024-08-31 10:57:43.424040+00:00
+"Cha-Am ,Thailand:2024-08-31",Cha-am:2024-08-31,Cha-Am,Thailand,Phetchaburi,12.800,99.967,Asia/Bangkok,2024-08-31 11:31:00+00:00,1725129060,7.0,2024-08-31 11:31:34.346919+00:00
+"Cha-Am ,Thailand:2024-09-01",Cha-am:2024-09-01,Cha-Am,Thailand,Phetchaburi,12.800,99.967,Asia/Bangkok,2024-09-01 03:10:00+00:00,1725185400,7.0,2024-09-01 03:10:38.626776+00:00
+"Pathum Thani ,Thailand:2024-09-01",Pathum:2024-09-01,Pathum Thani,Thailand,Pathum Thani,14.017,100.533,Asia/Bangkok,2024-09-01 03:31:00+00:00,1725186660,7.0,2024-09-01 03:31:47.549804+00:00
+"Bangkok ,Thailand:2024-09-01",Bangkok:2024-09-01,Bangkok,Thailand,Krung Thep,13.750,100.517,Asia/Bangkok,2024-09-01 03:49:00+00:00,1725187740,7.0,2024-09-01 03:54:30.743092+00:00
+"Muang Pichai ,Thailand:2024-09-01",Pichai:2024-09-01,Muang Pichai,Thailand,Uttaradit,17.287,100.097,Asia/Bangkok,2024-09-01 03:58:00+00:00,1725188280,7.0,2024-09-01 03:58:53.740845+00:00
+"Uttaradit ,Thailand:2024-09-01",Uttaradit:2024-09-01,Uttaradit,Thailand,Uttaradit,17.631,100.101,Asia/Bangkok,2024-09-01 04:00:00+00:00,1725188400,7.0,2024-09-01 04:00:51.254686+00:00
+"Nadi International Airport ,Fiji Islands:2024-09-01",nan:2024-09-01,Nadi International Airport,Fiji Islands,Nadi,-17.755,177.443,Pacific/Fiji,2024-09-01 09:02:00+00:00,1725206520,12.0,2024-09-01 04:02:54.547292+00:00
+"Takamatsu Airport ,Japan:2024-09-01",Tak:2024-09-01,Takamatsu Airport,Japan,Takamatsu,34.214,134.016,Asia/Tokyo,2024-09-01 06:07:00+00:00,1725196020,9.0,2024-09-01 04:07:44.120929+00:00
+"Tak ,Thailand:2024-09-01","Tak ,Thailand:2024-09-01",Tak,Thailand,Tak,16.867,99.133,Asia/Bangkok,2024-09-01 04:11:00+00:00,1725189060,7.0,2024-09-01 04:11:59.129401+00:00
+"Nonthaburi ,Thailand:2024-09-01",Nonthaburi:2024-09-01,Nonthaburi,Thailand,Nonthaburi,13.833,100.483,Asia/Bangkok,2024-09-01 04:18:00+00:00,1725189480,7.0,2024-09-01 04:18:27.546159+00:00
+"Nakhon Nayok ,Thailand:2024-09-01",nakhon nayok:2024-09-01,Nakhon Nayok,Thailand,Nakhon Nayok,14.203,101.215,Asia/Bangkok,2024-09-01 04:36:00+00:00,1725190560,7.0,2024-09-01 04:36:41.259126+00:00
+"Chiang Mai ,Thailand:2024-09-01",Chiang Mai:2024-09-01,Chiang Mai,Thailand,Chiang Mai,18.790,98.982,Asia/Bangkok,2024-09-01 04:38:00+00:00,1725190680,7.0,2024-09-01 04:38:50.720761+00:00

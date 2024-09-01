@@ -1,0 +1,41 @@
+{
+    "request": {
+        "type": "IATA",
+        "query": "Tak, Takamatsu Airport, Japan",
+        "language": "en",
+        "unit": "m"
+    },
+    "location": {
+        "name": "Takamatsu Airport",
+        "country": "Japan",
+        "region": "Takamatsu",
+        "lat": "34.214",
+        "lon": "134.016",
+        "timezone_id": "Asia/Tokyo",
+        "localtime": "2024-09-01 13:35",
+        "localtime_epoch": 1725197700,
+        "utc_offset": "9.0"
+    },
+    "current": {
+        "observation_time": "04:35 AM",
+        "temperature": 31,
+        "weather_code": 116,
+        "weather_icons": [
+            "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png"
+        ],
+        "weather_descriptions": [
+            "Partly cloudy"
+        ],
+        "wind_speed": 11,
+        "wind_degree": 10,
+        "wind_dir": "N",
+        "pressure": 1007,
+        "precip": 0,
+        "humidity": 59,
+        "cloudcover": 50,
+        "feelslike": 36,
+        "uv_index": 7,
+        "visibility": 10,
+        "is_day": "yes"
+    }
+}

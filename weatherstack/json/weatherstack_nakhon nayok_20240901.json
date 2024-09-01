@@ -1,0 +1,41 @@
+{
+    "request": {
+        "type": "City",
+        "query": "Nakhon Nayok, Thailand",
+        "language": "en",
+        "unit": "m"
+    },
+    "location": {
+        "name": "Nakhon Nayok",
+        "country": "Thailand",
+        "region": "Nakhon Nayok",
+        "lat": "14.203",
+        "lon": "101.215",
+        "timezone_id": "Asia/Bangkok",
+        "localtime": "2024-09-01 11:36",
+        "localtime_epoch": 1725190560,
+        "utc_offset": "7.0"
+    },
+    "current": {
+        "observation_time": "04:36 AM",
+        "temperature": 30,
+        "weather_code": 176,
+        "weather_icons": [
+            "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0009_light_rain_showers.png"
+        ],
+        "weather_descriptions": [
+            "Patchy rain nearby"
+        ],
+        "wind_speed": 8,
+        "wind_degree": 267,
+        "wind_dir": "W",
+        "pressure": 1008,
+        "precip": 0.1,
+        "humidity": 72,
+        "cloudcover": 56,
+        "feelslike": 35,
+        "uv_index": 7,
+        "visibility": 10,
+        "is_day": "yes"
+    }
+}
