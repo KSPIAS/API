@@ -1,0 +1,41 @@
+{
+    "request": {
+        "type": "City",
+        "query": "Pathum Thani, Thailand",
+        "language": "en",
+        "unit": "m"
+    },
+    "location": {
+        "name": "Pathum Thani",
+        "country": "Thailand",
+        "region": "Pathum Thani",
+        "lat": "14.017",
+        "lon": "100.533",
+        "timezone_id": "Asia/Bangkok",
+        "localtime": "2024-09-15 11:25",
+        "localtime_epoch": 1726399500,
+        "utc_offset": "7.0"
+    },
+    "current": {
+        "observation_time": "04:25 AM",
+        "temperature": 32,
+        "weather_code": 116,
+        "weather_icons": [
+            "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png"
+        ],
+        "weather_descriptions": [
+            "Partly cloudy"
+        ],
+        "wind_speed": 14,
+        "wind_degree": 264,
+        "wind_dir": "W",
+        "pressure": 1006,
+        "precip": 0,
+        "humidity": 59,
+        "cloudcover": 25,
+        "feelslike": 44,
+        "uv_index": 7,
+        "visibility": 10,
+        "is_day": "yes"
+    }
+}

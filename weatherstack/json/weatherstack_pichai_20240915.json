@@ -1,0 +1,41 @@
+{
+    "request": {
+        "type": "City",
+        "query": "Muang Pichai, Thailand",
+        "language": "en",
+        "unit": "m"
+    },
+    "location": {
+        "name": "Muang Pichai",
+        "country": "Thailand",
+        "region": "Uttaradit",
+        "lat": "17.287",
+        "lon": "100.097",
+        "timezone_id": "Asia/Bangkok",
+        "localtime": "2024-09-15 11:02",
+        "localtime_epoch": 1726398120,
+        "utc_offset": "7.0"
+    },
+    "current": {
+        "observation_time": "04:02 AM",
+        "temperature": 29,
+        "weather_code": 116,
+        "weather_icons": [
+            "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png"
+        ],
+        "weather_descriptions": [
+            "Partly cloudy"
+        ],
+        "wind_speed": 6,
+        "wind_degree": 223,
+        "wind_dir": "SW",
+        "pressure": 1005,
+        "precip": 0,
+        "humidity": 84,
+        "cloudcover": 25,
+        "feelslike": 33,
+        "uv_index": 6,
+        "visibility": 10,
+        "is_day": "yes"
+    }
+}

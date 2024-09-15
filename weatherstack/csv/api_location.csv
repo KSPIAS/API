@@ -15,3 +15,7 @@ location_id,request_id,name,country,region,lat,lon,timezone_id,local_time,localt
 "Nonthaburi ,Thailand:2024-09-01",Nonthaburi:2024-09-01,Nonthaburi,Thailand,Nonthaburi,13.833,100.483,Asia/Bangkok,2024-09-01 04:18:00+00:00,1725189480,7.0,2024-09-01 04:18:27.546159+00:00
 "Nakhon Nayok ,Thailand:2024-09-01",nakhon nayok:2024-09-01,Nakhon Nayok,Thailand,Nakhon Nayok,14.203,101.215,Asia/Bangkok,2024-09-01 04:36:00+00:00,1725190560,7.0,2024-09-01 04:36:41.259126+00:00
 "Chiang Mai ,Thailand:2024-09-01",Chiang Mai:2024-09-01,Chiang Mai,Thailand,Chiang Mai,18.790,98.982,Asia/Bangkok,2024-09-01 04:38:00+00:00,1725190680,7.0,2024-09-01 04:38:50.720761+00:00
+"Chiang Mai ,Thailand:2024-09-15",Chiang Mai:2024-09-15,Chiang Mai,Thailand,Chiang Mai,18.790,98.982,Asia/Bangkok,2024-09-15 03:30:00+00:00,1726396200,7.0,2024-09-15 03:31:09.441730+00:00
+"Muang Pichai ,Thailand:2024-09-15",pichai:2024-09-15,Muang Pichai,Thailand,Uttaradit,17.287,100.097,Asia/Bangkok,2024-09-15 04:02:00+00:00,1726398120,7.0,2024-09-15 04:03:13.410022+00:00
+"Uttaradit ,Thailand:2024-09-15",uttaradit:2024-09-15,Uttaradit,Thailand,Uttaradit,17.631,100.101,Asia/Bangkok,2024-09-15 04:15:00+00:00,1726398900,7.0,2024-09-15 04:15:23.682037+00:00
+"Pathum Thani ,Thailand:2024-09-15",Pathum Thani:2024-09-15,Pathum Thani,Thailand,Pathum Thani,14.017,100.533,Asia/Bangkok,2024-09-15 04:25:00+00:00,1726399500,7.0,2024-09-15 04:25:39.654082+00:00

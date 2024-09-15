@@ -1,0 +1,41 @@
+{
+    "request": {
+        "type": "City",
+        "query": "Chiang Mai, Thailand",
+        "language": "en",
+        "unit": "m"
+    },
+    "location": {
+        "name": "Chiang Mai",
+        "country": "Thailand",
+        "region": "Chiang Mai",
+        "lat": "18.790",
+        "lon": "98.982",
+        "timezone_id": "Asia/Bangkok",
+        "localtime": "2024-09-15 10:30",
+        "localtime_epoch": 1726396200,
+        "utc_offset": "7.0"
+    },
+    "current": {
+        "observation_time": "03:30 AM",
+        "temperature": 30,
+        "weather_code": 116,
+        "weather_icons": [
+            "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png"
+        ],
+        "weather_descriptions": [
+            "Partly cloudy"
+        ],
+        "wind_speed": 4,
+        "wind_degree": 189,
+        "wind_dir": "S",
+        "pressure": 1007,
+        "precip": 0,
+        "humidity": 70,
+        "cloudcover": 25,
+        "feelslike": 35,
+        "uv_index": 7,
+        "visibility": 10,
+        "is_day": "yes"
+    }
+}
